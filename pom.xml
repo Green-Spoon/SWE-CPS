@@ -7,11 +7,13 @@
 	<artifactId>OCSFMediatorExample</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
+
 	<modules>
 		<module>server</module>
 		<module>entities</module>
 		<module>client</module>
 	</modules>
+
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>15</maven.compiler.source>
@@ -19,19 +21,36 @@
 		<maven.assemblyPlugin.version>3.3.0</maven.assemblyPlugin.version>
 		<javafx.version>14</javafx.version>
 	</properties>
+
 	<dependencyManagement>
 		<dependencies>
+
 			<dependency>
 				<groupId>il.cshaifasweng.OCSFMediatorExample</groupId>
 				<artifactId>entities</artifactId>
 				<version>${project.version}</version>
 			</dependency>
+
+			<dependency>												// Hibernate
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>8.0.19</version>
+			</dependency>
+
+			<dependency>												// Hibernate
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-core</artifactId>
+				<version>5.4.12.Final</version>
+			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
+
 	<build>
 		<pluginManagement><!-- lock down plugins versions to avoid using Maven 
 				defaults (may be moved to parent pom) -->
 			<plugins>
+
 				<!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
 				<plugin>
 					<artifactId>maven-clean-plugin</artifactId>
