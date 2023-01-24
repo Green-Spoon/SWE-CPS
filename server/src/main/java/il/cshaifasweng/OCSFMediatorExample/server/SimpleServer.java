@@ -5,7 +5,7 @@ import il.cshaifasweng.OCSFMediatorExample.server.ocsf.ConnectionToClient;
 
 import java.io.IOException;
 
-import il.cshaifasweng.OCSFMediatorExample.entities.Warning;
+import warning.Warning;
 
 public class SimpleServer extends AbstractServer {
 
