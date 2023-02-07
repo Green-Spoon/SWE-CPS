@@ -2,20 +2,18 @@ package il.cshaifasweng.OCSFMediatorExample.entities;
 
 import javax.persistence.*;
 
+@Entity
 @Table(name = "customers")
 public class Customer extends Person {
-    public static final int INACTIVE = 0;
-    public static final int ACTIVE = 1;
-    public static final int PERSONAL = 0;
-    public static final int BUSINESS = 1;
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int index;
 
-    @Column(name = "sub_status")
-    private int sub_status;
+//    @Column(name = "sub_status")
+//    private int sub_status;
 
+    public static final int PERSONAL = 0;
+    public static final int BUSINESS = 1;
     @Column(name = "type")
     private int type;
 
@@ -33,21 +31,21 @@ public class Customer extends Person {
         this.money_balance = money_balance;
     }
 
-    public int getIndex() {
+    public int getCustomerIndex() {
         return index;
     }
 
-    public void setIndex(int index) {
+    public void setCustomerIndex(int index) {
         this.index = index;
     }
 
-    public int getSub_status() {
-        return sub_status;
-    }
-
-    public void setSub_status(int sub_status) {
-        this.sub_status = sub_status;
-    }
+//    public int getSub_status() {
+//        return sub_status;
+//    }
+//
+//    public void setSub_status(int sub_status) {
+//        this.sub_status = sub_status;
+//    }
 
     public int getType() {
         return type;

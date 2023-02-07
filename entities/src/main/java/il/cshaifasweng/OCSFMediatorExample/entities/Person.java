@@ -3,6 +3,7 @@ package il.cshaifasweng.OCSFMediatorExample.entities;
 import javax.persistence.*;
 /*import java.time.LocalTime;*/
 
+@Entity
 @Table(name = "persons")
 public class Person {
     @Id
